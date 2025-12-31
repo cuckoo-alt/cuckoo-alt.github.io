@@ -4,7 +4,7 @@
   <title>Paul's Personal Page</title>
   <style>
     body {
-      background: #000080 url('old_map.png'); /* Classic tiled bg */
+      background: #000080;
       color: #ffff00;
       font-family: "Courier New", monospace;
       margin: 10px;
@@ -133,19 +133,24 @@
     <tr>
       <td align="center">
         <font color="#00ff00" face="Courier New" size="2">
-          <script>
-            // Simulate a retro hit count (starts around 1,200 and grows slowly)
-            var min = 1200;
-            var max = 2500;
-            var count = Math.floor(Math.random() * (max - min + 1)) + min;
-            document.write(count);
-          </script>
+          <span id="hit-counter">01247</span>
         </font>
       </td>
     </tr>
   </table>
   <br><small>(self-updating hit counter • est. 1994)</small>
 </div>
+
+<script>
+  // Generate a retro-style hit count on page load
+  (function() {
+    var min = 1200;
+    var max = 2999;
+    var count = Math.floor(Math.random() * (max - min + 1)) + min;
+    var padded = count.toString().padStart(5, '0');
+    document.getElementById('hit-counter').textContent = padded;
+  })();
+</script>
   </div>
 
   <div class="footer">
