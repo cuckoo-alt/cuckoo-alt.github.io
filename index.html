@@ -127,41 +127,45 @@
       </li>
     </ul>
 
-    <center>
-  <div class="counter">
-    <p>Visitor Count:</p>
-    <table border="2" cellpadding="2" cellspacing="0" bgcolor="#000000" width="100">
-      <tr>
-        <td align="center">
-          <font color="#00ff00" face="Courier New" size="2">
-            <span id="hit-counter">01247</span>
-          </font>
-        </td>
-      </tr>
-    </table>
-    <br><small>(self-updating hit counter • est. 1995)</small>
+  </div> <!-- Close .container HERE -->
+
+  <center>
+    <hr width="80%" color="#ff00ff" noshade>
+    <div class="counter">
+      <p>Visitor Count:</p>
+      <table border="2" cellpadding="2" cellspacing="0" bgcolor="#000000" width="100">
+        <tr>
+          <td align="center">
+            <font color="#00ff00" face="Courier New" size="2">
+              <span id="hit-counter">01247</span>
+            </font>
+          </td>
+        </tr>
+      </table>
+      <br><small>(self-updating hit counter • est. 1995)</small>
+    </div>
+    <hr width="80%" color="#ff00ff" noshade>
+  </center>
+
+  <script>
+    (function() {
+      var min = 1200;
+      var max = 2999;
+      var count = Math.floor(Math.random() * (max - min + 1)) + min;
+      var padded = count.toString().padStart(5, '0');
+      document.getElementById('hit-counter').textContent = padded;
+    })();
+  </script>
+
+  <center>
+  <div class="footer">
+    <p>
+      © 1995–<script>document.write(new Date().getFullYear());</script> Paul. All rights reserved.<br>
+      Best viewed in Netscape Navigator or Internet Explorer 3.0
+    </p>
+    <p><a href="mailto:">Send me an email!</a> | <a href="#">Back to Top</a></p>
   </div>
 </center>
-
-<script>
-  // Generate a retro-style hit count on page load
-  (function() {
-    var min = 1200;
-    var max = 2999;
-    var count = Math.floor(Math.random() * (max - min + 1)) + min;
-    var padded = count.toString().padStart(5, '0');
-    document.getElementById('hit-counter').textContent = padded;
-  })();
-</script>
-  </div>
-
-  <div class="footer">
-  <p>
-    © 1995–<script>document.write(new Date().getFullYear());</script> Paul. All rights reserved.<br>
-    Best viewed in Netscape Navigator or Internet Explorer 3.0
-  </p>
-  <p><a href="mailto:">Send me an email!</a> | <a href="#">Back to Top</a></p>
-</div>
 
   <!-- Classic spacer -->
   <center>
